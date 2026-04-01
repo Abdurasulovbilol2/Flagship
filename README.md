@@ -102,6 +102,20 @@ Run test suite inside Docker:
 docker compose up --build
 ```
 
+## 8.1) Optional Live Landing Page
+
+This repository now includes a tiny static landing page for Vercel deployment.
+It exists only to provide a valid public URL for demos or form fields that require a live website.
+
+Deploy with:
+
+```bash
+npm install -g vercel
+vercel
+```
+
+After deployment, use the generated `https://...vercel.app` URL as your website link.
+
 ## 9) Included Sample Coverage
 
 - UI login tests and form validation (SauceDemo)

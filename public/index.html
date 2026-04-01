@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flagship Test Automation</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f0e8;
+      --panel: rgba(255, 252, 247, 0.88);
+      --text: #1e1b18;
+      --muted: #5f554d;
+      --accent: #c45c2c;
+      --accent-dark: #8f3d19;
+      --line: rgba(30, 27, 24, 0.1);
+      --shadow: 0 24px 60px rgba(85, 55, 33, 0.16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(196, 92, 44, 0.16), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(101, 138, 92, 0.18), transparent 30%),
+        linear-gradient(135deg, #f7efe6 0%, #efe3d1 100%);
+      display: grid;
+      place-items: center;
+      padding: 32px;
+    }
+
+    main {
+      width: min(900px, 100%);
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      backdrop-filter: blur(14px);
+    }
+
+    .hero {
+      padding: 56px 40px 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(196, 92, 44, 0.12);
+      color: var(--accent-dark);
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 0.96;
+      letter-spacing: -0.04em;
+      max-width: 10ch;
+    }
+
+    p {
+      margin: 18px 0 0;
+      max-width: 58ch;
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0;
+    }
+
+    .card {
+      padding: 28px 32px 34px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .card:nth-child(3n) {
+      border-right: none;
+    }
+
+    .label {
+      margin: 0 0 10px;
+      font: 700 12px/1 Arial, sans-serif;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-dark);
+    }
+
+    .value {
+      margin: 0;
+      font-size: 28px;
+      line-height: 1.15;
+    }
+
+    .footer {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 32px 28px;
+      font-family: Arial, sans-serif;
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--accent-dark);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        padding: 40px 24px 24px;
+      }
+
+      .card,
+      .footer {
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+
+      .card {
+        border-right: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <span class="eyebrow">Flagship</span>
+      <h1>Playwright automation, shipped cleanly.</h1>
+      <p>
+        This public page exists so the repository has a valid deploy target on Vercel.
+        Use the deployed URL anywhere a live website link is required, while the actual
+        test target remains configurable through environment variables.
+      </p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <p class="label">Framework</p>
+        <p class="value">UI + API E2E</p>
+      </article>
+      <article class="card">
+        <p class="label">Runner</p>
+        <p class="value">Playwright</p>
+      </article>
+      <article class="card">
+        <p class="label">Reports</p>
+        <p class="value">HTML + Allure</p>
+      </article>
+    </section>
+
+    <footer class="footer">
+      <span>Deploy this repository on Vercel to get a live URL.</span>
+      <a href="https://www.saucedemo.com" target="_blank" rel="noreferrer">Current sample target</a>
+    </footer>
+  </main>
+</body>
+</html>
