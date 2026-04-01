@@ -1,0 +1,4 @@
+firstName,lastName,postalCode,expectedError
+,,12345,First Name is required
+John,,12345,Last Name is required
+John,Doe,,Postal Code is required

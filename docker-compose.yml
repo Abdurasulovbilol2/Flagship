@@ -1,0 +1,15 @@
+services:
+  e2e:
+    build: .
+    container_name: flagship-e2e
+    environment:
+      - CI=true
+      - TEST_ENV=staging
+      - HEADLESS=true
+      - RETRIES=2
+      - WORKERS=50%
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results
+      - ./allure-results:/app/allure-results
+    command: ["npx", "playwright", "test"]
